@@ -1,4 +1,5 @@
 # Copyright 2017 Xavier Snelgrove
+%tensorflow_version 1.x
 import numpy as np
 
 import os
@@ -60,10 +61,10 @@ def make_name(name):
 
 
 def PrintLayer(msg):
-    return Lambda(lambda x: tf.print(x, [x], message=msg, summarize=16))
+    return Lambda(lambda x: tf.Print(x, [x], message=msg, summarize=16))
 
 def PrintLayerShape(msg):
-    return Lambda(lambda x: tf.print(x, [tf.shape(x)], message=msg, summarize=16))
+    return Lambda(lambda x: tf.Print(x, [tf.shape(x)], message=msg, summarize=16))
 
 def construct_gatys_model(padding='valid'):
     default_model = vgg19.VGG19(weights='imagenet')
