@@ -1,5 +1,4 @@
 # Copyright 2017 Xavier Snelgrove
-%tensorflow_version 1.x
 import numpy as np
 
 import os
